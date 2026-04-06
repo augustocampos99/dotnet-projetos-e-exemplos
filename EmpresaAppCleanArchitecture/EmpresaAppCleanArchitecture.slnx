@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="EmpresaAppCleanArchitecture.Application/EmpresaAppCleanArchitecture.Application.csproj" />
+  <Project Path="EmpresaAppCleanArchitecture.Domain/EmpresaAppCleanArchitecture.Domain.csproj" />
+  <Project Path="EmpresaAppCleanArchitecture.Infra/EmpresaAppCleanArchitecture.Infra.csproj" />
+  <Project Path="EmpresaAppCleanArchitecture.Web/EmpresaAppCleanArchitecture.Web.csproj" />
+</Solution>
