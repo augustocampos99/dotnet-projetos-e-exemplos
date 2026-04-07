@@ -21,8 +21,8 @@ namespace EmpresaAppCleanArchitecture.Infra.Repositories
         public virtual async Task<IEnumerable<T>> FindAll(int take, int skip)
         {
             return await _DBSet
-                .Take(take)
                 .Skip(skip)
+                .Take(take)
                 .ToListAsync();
         }
 

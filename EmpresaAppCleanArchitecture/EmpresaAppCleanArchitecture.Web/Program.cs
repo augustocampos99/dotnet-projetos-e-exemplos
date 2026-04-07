@@ -24,15 +24,32 @@ builder.Services.AddTransient<IDepartamentoRepository, DepartamentoRepository>()
 builder.Services.AddTransient<ICargoRepository, CargoRepository>();
 
 // D.I. Services
+builder.Services.AddTransient<IFuncionarioService, FuncionarioService>();
 builder.Services.AddTransient<IDepartamentoService, DepartamentoService>();
+builder.Services.AddTransient<ICargoService, CargoService>();
+
+// Config CORS
+builder.Services.AddCors(options =>
+    options.AddPolicy("EnableAllOrigins",
+        builder =>
+        {
+            builder.WithOrigins("*")
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+        })
+);
 
 var app = builder.Build();
+
+// Config CORS (Change for PROD on publish)
+app.UseCors("EnableAllOrigins");
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
-    app.UseSwaggerUI(options => options.SwaggerEndpoint("/openapi/v1.json", "ToRead v1") );
+    app.UseSwaggerUI(options => options.SwaggerEndpoint("/openapi/v1.json", "Empresas api") );
 }
 
 app.UseHttpsRedirection();

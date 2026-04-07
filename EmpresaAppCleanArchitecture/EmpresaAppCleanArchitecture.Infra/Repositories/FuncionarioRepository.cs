@@ -17,37 +17,54 @@ namespace EmpresaAppCleanArchitecture.Infra.Repositories
             _context = context;            
         }
 
+        public override async Task<IEnumerable<Funcionario>> FindAll(int take, int skip)
+        {
+            return await _context.Funcionarios
+                .Include(e => e.Cargo)
+                .Include(e => e.Departamento)
+                .Skip(skip)
+                .Take(take)
+                .ToListAsync();
+        }
+
         public async Task<IEnumerable<Funcionario>> FindAllByCargo(Guid cargoId, int take, int skip)
         {
             return await _context.Funcionarios
+                .Include(e => e.Cargo)
+                .Include(e => e.Departamento)
                 .Where(e => e.CargoId == cargoId)
-                .Take(take)
                 .Skip(skip)
+                .Take(take)
                 .ToListAsync();
         }
 
         public async Task<IEnumerable<Funcionario>> FindAllByDepartamento(Guid departamentoId, int take, int skip)
         {
             return await _context.Funcionarios
+                .Include(e => e.Cargo)
+                .Include(e => e.Departamento)
                 .Where(e => e.DepartamentoId == departamentoId)
-                .Take(take)
                 .Skip(skip)
+                .Take(take)
                 .ToListAsync();
         }
 
         public async Task<IEnumerable<Funcionario>> FindAllByNome(string nome, int take, int skip)
         {
             return await _context.Funcionarios
+                .Include(e => e.Cargo)
+                .Include(e => e.Departamento)
                 .Where(e => e.Nome.ToLower().Contains(nome.ToLower()))
-                .Take(take)
                 .Skip(skip)
+                .Take(take)
                 .ToListAsync();
         }
 
         public async Task<Funcionario?> FindOneById(Guid id)
         {
-            return await _context
-                .Funcionarios
+            return await _context.Funcionarios
+                .Include(e => e.Cargo)
+                .Include(e => e.Departamento)
                 .Where(e => e.Id == id)
                 .FirstOrDefaultAsync();
         }

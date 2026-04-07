@@ -30,12 +30,33 @@ namespace EmpresaAppCleanArchitecture.Infra.Mapping
                 .HasColumnName("departamento_id")
                 .IsRequired();
 
-            builder.Property(e => e.Cargo)
+            builder.Property(e => e.CargoId)
                 .HasColumnName("cargo_id")
+                .IsRequired();
+
+            builder.Property(e => e.Status)
+                .HasColumnName("status")
+                .HasConversion<string>()
+                .IsRequired();
+
+            builder.Property(e => e.DataCriacao)
+                .HasColumnName("data_criacao")
+                .IsRequired();
+
+            builder.Property(e => e.DataAtualizacao)
+                .HasColumnName("data_atualizacao")
                 .IsRequired();
 
             builder.Ignore(e => e.Departamento);
             builder.Ignore(e => e.Cargo);
+
+            builder.HasOne(e => e.Departamento)
+                .WithMany()
+                .HasForeignKey(e => e.DepartamentoId);
+
+            builder.HasOne(e => e.Cargo)
+                .WithMany()
+                .HasForeignKey(e => e.CargoId);
 
         }
     }

@@ -1,4 +1,8 @@
 <Solution>
+  <Folder Name="/Database/">
+    <File Path="docker-compose.yml" />
+    <File Path="Scripts.sql" />
+  </Folder>
   <Project Path="EmpresaAppCleanArchitecture.Application/EmpresaAppCleanArchitecture.Application.csproj" />
   <Project Path="EmpresaAppCleanArchitecture.Domain/EmpresaAppCleanArchitecture.Domain.csproj" />
   <Project Path="EmpresaAppCleanArchitecture.Infra/EmpresaAppCleanArchitecture.Infra.csproj" />
