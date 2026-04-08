@@ -3,12 +3,14 @@ using EmpresaAppCleanArchitecture.Application.DTOs.Response;
 using EmpresaAppCleanArchitecture.Application.Exceptions;
 using EmpresaAppCleanArchitecture.Application.Services;
 using EmpresaAppCleanArchitecture.Application.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EmpresaAppCleanArchitecture.Web.Controllers
 {
     [Route("api/v1/cargos")]
     [ApiController]
+    [Authorize(Roles = "Admin, Master")]
     public class CargoController : ControllerBase
     {
         private readonly ICargoService _cargoService;
