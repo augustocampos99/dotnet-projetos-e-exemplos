@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "PagamentoMensageria.Web.Controllers.PagamentoController",
+    "Method": "Post",
+    "RelativePath": "api/pagamentos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pagamento",
+        "Type": "PagamentoMensageria.Web.Entities.Pagamento",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

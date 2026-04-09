@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="PagamentoMensageria.Consumer/PagamentoMensageria.Consumer.csproj" />
+  <Project Path="PagamentoMensageria.Web/PagamentoMensageria.Web.csproj" />
+</Solution>

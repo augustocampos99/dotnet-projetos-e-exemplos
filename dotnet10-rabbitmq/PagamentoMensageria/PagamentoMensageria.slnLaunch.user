@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "PagamentoMensageria.Web\\PagamentoMensageria.Web.csproj",
+        "Action": "StartWithoutDebugging"
+      },
+      {
+        "Path": "PagamentoMensageria.Consumer\\PagamentoMensageria.Consumer.csproj",
+        "Action": "StartWithoutDebugging"
+      }
+    ]
+  }
+]
