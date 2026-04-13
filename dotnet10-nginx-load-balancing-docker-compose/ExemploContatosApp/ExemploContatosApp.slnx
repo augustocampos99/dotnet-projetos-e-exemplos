@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/Infra/">
+    <File Path="Dockerfile" />
+  </Folder>
+  <Project Path="ExemploContatosApp/ExemploContatosApp.csproj" />
+</Solution>

@@ -1,0 +1,81 @@
+[
+  {
+    "ContainingType": "ExemploContatosApp.Controllers.ContatoController",
+    "Method": "GetAll",
+    "RelativePath": "api/v1/contatos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ExemploContatosApp.Controllers.ContatoController",
+    "Method": "Create",
+    "RelativePath": "api/v1/contatos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contato",
+        "Type": "ExemploContatosApp.Entities.Contato",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ExemploContatosApp.Controllers.ContatoController",
+    "Method": "GetOne",
+    "RelativePath": "api/v1/contatos/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ExemploContatosApp.Controllers.ContatoController",
+    "Method": "Create",
+    "RelativePath": "api/v1/contatos/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "contato",
+        "Type": "ExemploContatosApp.Entities.Contato",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ExemploContatosApp.Controllers.ContatoController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/contatos/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

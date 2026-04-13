@@ -1,0 +1,25 @@
+services:
+  app-contatos-1:
+    build:
+      context: .
+    restart: unless-stopped
+
+  app-contatos-2:
+    build:
+      context: .
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    restart: unless-stopped
+    depends_on:
+      - app-contatos-1
+      - app-contatos-2
+
+
+# Subindo o app-contatos-1 e app-contatos-2 (dotnet-10) usando o Docker file como base (context: .)
+# Subindo o nginx copiando o nginx/nginx.conf
