@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Projetos\\Estudos\\dotnet-projetos-e-exemplos\\dotnet10-rabbitmq\\PagamentoMensageria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D2CB4FA-E5AF-497D-A1D0-1CD0F82E27A2}|PagamentoMensageria.Consumer\\PagamentoMensageria.Consumer.csproj|c:\\projetos\\estudos\\dotnet-projetos-e-exemplos\\dotnet10-rabbitmq\\pagamentomensageria\\pagamentomensageria.consumer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D2CB4FA-E5AF-497D-A1D0-1CD0F82E27A2}|PagamentoMensageria.Consumer\\PagamentoMensageria.Consumer.csproj|solutionrelative:pagamentomensageria.consumer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{96847107-34D9-F699-CAF8-B00C5DC44063}|PagamentoMensageria.Consumer\\PagamentoMensageria.Consumer.csproj|c:\\projetos\\estudos\\dotnet-projetos-e-exemplos\\dotnet10-rabbitmq\\pagamentomensageria\\pagamentomensageria.consumer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96847107-34D9-F699-CAF8-B00C5DC44063}|PagamentoMensageria.Consumer\\PagamentoMensageria.Consumer.csproj|solutionrelative:pagamentomensageria.consumer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{480F8124-0FE2-18DC-FC3B-ABEED406656F}|PagamentoMensageria.Web\\PagamentoMensageria.Web.csproj|c:\\projetos\\estudos\\dotnet-projetos-e-exemplos\\dotnet10-rabbitmq\\pagamentomensageria\\pagamentomensageria.web\\services\\pagamentoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{480F8124-0FE2-18DC-FC3B-ABEED406656F}|PagamentoMensageria.Web\\PagamentoMensageria.Web.csproj|solutionrelative:pagamentomensageria.web\\services\\pagamentoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PagamentoService.cs",
+              "DocumentMoniker": "C:\\Projetos\\Estudos\\dotnet-projetos-e-exemplos\\dotnet10-rabbitmq\\PagamentoMensageria\\PagamentoMensageria.Web\\Services\\PagamentoService.cs",
+              "RelativeDocumentMoniker": "PagamentoMensageria.Web\\Services\\PagamentoService.cs",
+              "ToolTip": "C:\\Projetos\\Estudos\\dotnet-projetos-e-exemplos\\dotnet10-rabbitmq\\PagamentoMensageria\\PagamentoMensageria.Web\\Services\\PagamentoService.cs",
+              "RelativeToolTip": "PagamentoMensageria.Web\\Services\\PagamentoService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T18:47:54.175Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +41,7 @@
               "RelativeDocumentMoniker": "PagamentoMensageria.Consumer\\Program.cs",
               "ToolTip": "C:\\Projetos\\Estudos\\dotnet-projetos-e-exemplos\\dotnet10-rabbitmq\\PagamentoMensageria\\PagamentoMensageria.Consumer\\Program.cs",
               "RelativeToolTip": "PagamentoMensageria.Consumer\\Program.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAADMAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-09T14:39:36.854Z",
               "EditorCaption": ""

@@ -1,0 +1,30 @@
+services:
+  redis:
+    image: redis:7.2.4
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes
+    volumes:
+      - redis-data:/data
+
+  redis-insight:
+    image: redis/redisinsight:latest
+    restart: always
+    ports:
+      - "5540:5540"
+    volumes:
+      - redis-insight-data:/data
+    # Optional: connect RedisInsight to the redis-server service automatically
+    environment:
+      # Use the service name "redis-server" as the host
+      REDISINSIGHT_HOST: redis-server
+      REDISINSIGHT_PORT: 6379
+
+volumes:
+  redis-data:
+    driver: local
+  redis-insight-data:
+    driver: local
+
+# conexão no redis insight: redis:6379
