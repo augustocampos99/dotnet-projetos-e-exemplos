@@ -42,9 +42,14 @@ namespace ExemploContatosApp.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Create(Guid id, [FromBody] Contato contato)
+        public async Task<IActionResult> Update(Guid id, [FromBody] Contato contato)
         {
             var result = await _contatoService.Update(id, contato);
+            if (result == null)
+            {
+                return NotFound();
+            }
+
             return Ok(result);
         }
 

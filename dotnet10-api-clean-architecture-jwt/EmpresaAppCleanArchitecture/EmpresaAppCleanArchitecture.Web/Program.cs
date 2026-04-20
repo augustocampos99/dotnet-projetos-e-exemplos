@@ -14,9 +14,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
-
 // DI Context
 var connectionString = builder.Configuration.GetConnectionString("PostgreSQLConnection");
 builder.Services.AddDbContext<PostgreSQLContext>(options =>
@@ -54,29 +51,32 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateAudience = true,
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
-            ValidIssuer = "https://abtestfactory.com",
-            ValidAudience = "https://abtestfactory.com",
+            ValidIssuer = "http://localhost:4200",
+            ValidAudience = "http://localhost:4200",
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("rD0vQkpTzqzd2P03YpvudaUq3VYtDhHF"))
         };
     });
 
 builder.Services.AddAuthorization();
 
+// Add OpenApi
+builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
 // Config CORS (Change for PROD on publish)
 app.UseCors("EnableAllOrigins");
 
-app.UseAuthentication();
-app.UseAuthorization();
-
-// Configure the HTTP request pipeline.
+// Configure Swagger (Swashbuckle.AspNetCore.SwaggerUI).
+// http://localhost:5239/swagger/index.html
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
     app.UseSwaggerUI(options => options.SwaggerEndpoint("/openapi/v1.json", "Empresas api") );
 }
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.UseHttpsRedirection();
 

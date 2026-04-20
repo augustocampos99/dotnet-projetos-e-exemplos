@@ -8,8 +8,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
 
 // DI Context
 var connectionString = builder.Configuration.GetConnectionString("PostgreSQLConnection");
@@ -20,13 +18,31 @@ builder.Services.AddDbContext<PostgreSQLContext>(options =>
 // D.I Services
 builder.Services.AddTransient<IContatoService, ContatoService>();
 
+// Config CORS
+builder.Services.AddCors(options =>
+    options.AddPolicy("EnableAllOrigins",
+        builder =>
+        {
+            builder.WithOrigins("*")
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+        })
+);
+
+// Add OpenApi
+builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Config CORS (Change for PROD on publish)
+app.UseCors("EnableAllOrigins");
+
+// Configure Swagger (Swashbuckle.AspNetCore.SwaggerUI).
+// http://localhost:5239/swagger/index.html
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.UseSwaggerUI(options => options.SwaggerEndpoint("/openapi/v1.json", "Empresas api"));
 }
 
 app.UseAuthorization();

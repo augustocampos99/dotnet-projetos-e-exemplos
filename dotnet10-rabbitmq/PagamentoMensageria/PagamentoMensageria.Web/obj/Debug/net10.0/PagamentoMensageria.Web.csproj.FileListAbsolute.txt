@@ -34,3 +34,4 @@ C:\Projetos\Estudos\dotnet-projetos-e-exemplos\dotnet10-rabbitmq\PagamentoMensag
 C:\Projetos\Estudos\dotnet-projetos-e-exemplos\dotnet10-rabbitmq\PagamentoMensageria\PagamentoMensageria.Web\obj\Debug\net10.0\PagamentoMensageria.Web.pdb
 C:\Projetos\Estudos\dotnet-projetos-e-exemplos\dotnet10-rabbitmq\PagamentoMensageria\PagamentoMensageria.Web\obj\Debug\net10.0\PagamentoMensageria.Web.genruntimeconfig.cache
 C:\Projetos\Estudos\dotnet-projetos-e-exemplos\dotnet10-rabbitmq\PagamentoMensageria\PagamentoMensageria.Web\obj\Debug\net10.0\ref\PagamentoMensageria.Web.dll
+C:\Projetos\Estudos\dotnet-projetos-e-exemplos\dotnet10-rabbitmq\PagamentoMensageria\PagamentoMensageria.Web\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
