@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="InternetBanking.Application/InternetBanking.Application.csproj" />
+  <Project Path="InternetBanking.Domain/InternetBanking.Domain.csproj" />
+  <Project Path="InternetBanking.Infra/InternetBanking.Infra.csproj" />
+  <Project Path="InternetBanking.Web/InternetBanking.Web.csproj" />
+</Solution>
