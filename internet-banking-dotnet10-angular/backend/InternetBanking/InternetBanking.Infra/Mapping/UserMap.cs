@@ -51,6 +51,7 @@ namespace InternetBanking.Infra.Mapping
 
             builder.Property(e => e.Status)
                 .HasColumnName("status")
+                .HasConversion<string>()
                 .IsRequired();
 
             builder.Property(e => e.CreatedAt)

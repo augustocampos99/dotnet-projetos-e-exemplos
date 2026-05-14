@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InternetBanking.Domain.Enums;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -24,7 +25,7 @@ namespace InternetBanking.Domain.Entities
 
         public string? Password { get; set; }
 
-        public string Status { get; set; }
+        public UserStatusEnum Status { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

@@ -7,5 +7,6 @@ namespace InternetBanking.Domain.Repositories
 {
     public interface IUserRepository : IGenericRepository<User>
     {
+        Task<User?> FindById(long id);
     }
 }

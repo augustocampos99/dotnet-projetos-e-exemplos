@@ -1,9 +1,7 @@
 ﻿using InternetBanking.Domain.Entities;
 using InternetBanking.Domain.Repositories;
 using InternetBanking.Infra.Context;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Microsoft.EntityFrameworkCore;
 
 namespace InternetBanking.Infra.Repositories
 {
@@ -16,5 +14,11 @@ namespace InternetBanking.Infra.Repositories
             _context = context;
         }
 
+        public async Task<User?> FindById(long id)
+        {
+            return await _context.Users
+                .Where(e => e.Id == id)
+                .FirstOrDefaultAsync();
+        }
     }
 }
